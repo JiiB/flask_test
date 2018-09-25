@@ -14,7 +14,8 @@ def index():
 def spin():
   servo = Servo(17)
   servo.max()
-  time.sleep(1)
+  sleep(1)
+  servo.detach()
   print("servo spin ran")
   return render_template('index.html', name=0)
 
