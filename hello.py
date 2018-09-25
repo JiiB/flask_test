@@ -13,8 +13,12 @@ def index():
 @app.route('/spin')
 def spin():
   servo = Servo(17)
+  servo.min()
+  sleep(0.5)
+  servo.mid()
+  sleep(0.5)
   servo.max()
-  sleep(1)
+  sleep(0.5)
   servo.detach()
   print("servo spin ran")
   return render_template('index.html', name=0)
