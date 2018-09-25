@@ -12,9 +12,7 @@ def index():
 
 @app.route('/spin')
 def spin():
-  if servo is None:
-    servo = Servo(17)
-  
+  servo = Servo(17)
   servo.max()
   time.sleep(1)
   print("servo spin ran")
